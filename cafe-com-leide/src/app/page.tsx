@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Navbar from "@/app/components/Navbar";
+import Line from "@/app/patterns/Line"
 import Banner from "@/app/components/Banner";
 import About from "@/app/components/About";
 import Boulangerie from "@/app/components/Boulangerie";
@@ -14,9 +15,12 @@ export default function Home() {
       <Navbar />
       <Banner />
       <About />
+      <Line />
       <Boulangerie />
       <Products />
+      <Line />
       <Production />
+      <Line />
       <Contact />
       <Footer />
     </div>
