@@ -1,51 +1,55 @@
-// src/app/components/Navbar.tsx
+"use client";
 
-import React from "react";
+import { useState, useEffect } from "react";
+import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
 import Link from "next/link";
-import { FaInstagram, FaTiktok, FaFacebookF } from "react-icons/fa"; // Importação dos ícones
-import styles from "../styles/components/Navbar.module.css";
+import Image from "next/image";
+import styles from "@/app/styles/components/Navbar.module.css";
 
 const Navbar = () => {
-  return (
-    <nav className={styles.navbar}>
-      <div className={styles.logo}>LOGO</div>
 
-      <ul className={styles.navLinks}>
-        <li>
-          <Link href="#about">Sobre</Link>
-        </li>
-        <li>
-          <Link href="#boulangerie">Boulangerie</Link>
-        </li>
-        <li>
-          <Link href="#products">Produtos</Link>
-        </li>
-        <li>
-          <Link href="#contact">Contato</Link>
-        </li>
-      </ul>
+    // Adicionando efeito de mudança ao fazer o scroll da página
+    const [scrolled, setScrolled] = useState(false);
 
-      <div className={styles.socialIcons}>
-        <a
-          href="https://instagram.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaInstagram />
-        </a>
-        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
-          <FaTiktok />
-        </a>
-        <a
-          href="https://facebook.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaFacebookF />
-        </a>
-      </div>
-    </nav>
-  );
+    useEffect(() => {
+        const handleScroll = () => {
+            const isScrolled = window.scrollY > 50; 
+            setScrolled(isScrolled);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+
+    // Estrutura da página
+    return (
+        <nav className={`${styles.menu} ${scrolled ? styles.scrolled : ""}`}>
+            <Link href="/">
+                <Image className={styles.logo} src="/images/logo.png" width={75} height={75} alt="Logo Café Com Leide" />
+            </Link>
+            <ul className={`${styles.buttons} ${scrolled ? styles.scrolled : ""}`}>
+                <li><Link href="/#Sobre">Sobre</Link></li>
+                <li><Link href="/#Boulangerie">Boulangerie</Link></li>
+                <li><Link href="/#Produtos">Produtos</Link></li>
+                <li><Link href="/#Contato">Contato</Link></li>
+            </ul>
+
+            <div className={`${styles.socials} ${scrolled ? styles.scrolled : ""}`}>
+                <Link target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/cafecomleide.ubatuba/" aria-label="Instagram">
+                    <FaInstagram className={styles.iconInsta} />
+                </Link>
+                <Link target="_blank" rel="noopener noreferrer" href="https://www.tiktok.com/@cafecomleide.ubatuba" aria-label="TikTok">
+                    <FaTiktok className={styles.iconInsta} />
+                </Link>
+                <Link target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/" aria-label="Facebook">
+                    <FaFacebook className={styles.iconFace} />
+                </Link>
+            </div>
+        </nav>
+    );
 };
 
 export default Navbar;
