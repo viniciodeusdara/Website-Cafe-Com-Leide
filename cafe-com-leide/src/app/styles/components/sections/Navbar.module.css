@@ -1,0 +1,209 @@
+nav.menu {
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	display: flex;
+	width: 100vw;
+	justify-content: space-around;
+	align-items: center;
+	height: 80px;
+	background-color: rgba(0,0,0,0);
+}
+
+.icons {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	height: 70px;
+	overflow: hidden;
+}
+
+.icons .width{
+	width: 90px;
+	display: none;
+}
+
+.icons img {
+	object-fit: cover;
+	object-position: center;
+}
+
+.icons .socials{
+	padding-top: 5px;
+}
+
+.icons .socials * {
+	margin: 0 5px;
+	padding: 0 2px;
+    color: white;
+}
+
+.icons .socials a {
+	text-decoration: none;
+}
+
+.icons svg {
+	font-size: 2em;
+}
+
+.hamburguer {
+	margin: 0 20px;
+	display: none;
+	border: none;
+	background: none;
+	border-top: 3px solid white;
+	cursor: pointer;
+}
+
+.hamburguer::before,
+.hamburguer::after {
+	content: "";
+	display: block;
+	width: 30px;
+	height: 3px;
+	background: white;
+	margin-top: 6px;
+}
+
+.buttons {
+	display: flex;
+	gap: 3vw;
+    font-size: 1.7em;
+    font-weight: 400;
+	align-items: center;
+	justify-content: center;
+	list-style: none;
+}
+
+.buttons li {
+	padding: 5px;
+	letter-spacing: 2px;
+	position: relative;
+}
+
+.buttons li::after {
+	content: '';
+	display: block;
+	height: 2px;
+	background-color: white;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	transform: scaleX(0);
+	transition: transform .3s ease-in-out
+}
+
+.buttons li:hover::after {
+	transform: scaleX(1);
+}
+
+.buttons li a {
+	color: white;
+	text-decoration: none;
+}
+
+.menu .active {
+	transform: translateX(0);
+	opacity: .94;
+	z-index: 100;
+}
+
+@media (max-width: 980px) {
+	.buttons {
+		gap: 3vw;
+		font-size: 0.9em;
+	}
+
+	.menu > button {
+		position: fixed;
+		bottom: 5vh;
+		right: 5vw;
+		z-index: 100;
+	}
+}
+
+@media (max-width: 820px) {
+	.icons {
+		gap: 3px;
+	}
+
+	.icons .socials * {
+		margin: 2px;
+		padding: 2px;
+	}
+}
+
+@media (max-width: 720px) {
+	.width {
+		display: none;
+	}
+
+	.menu {
+		justify-content: flex-start;
+	}
+	
+	.icons {
+		justify-content: space-around;
+		flex-direction: row-reverse;
+		width: 100%;
+	}
+
+	.buttons {
+		position: absolute;
+		flex-direction: column;
+		background-color: black;
+		top: 70px;
+		right: 0;
+		width: 50vw;
+		gap: 30px;
+		min-width: 270px;
+		height: 285px;
+		border-radius: 0  0 20px 20px;
+		justify-content: flex-start;
+		align-items: center;
+		padding-top: 15px;
+		transform: translateX(100%);
+		opacity: 0;
+		transition: .5s ease-out;
+		z-index: 0;
+	}
+	
+	.buttons li {
+		position: relative;
+		opacity: 0;
+	}
+
+	.menu .active li:nth-child(1){
+		transition: .5s .2s;
+		opacity: 1;
+	}
+
+	.menu .active li:nth-child(2){
+		transition: .5s .4s;
+		opacity: 1;
+	}
+
+	.menu .active li:nth-child(3){
+		transition: .5s .6s;
+		opacity: 1;
+	}
+
+	.menu .active li:nth-child(4){
+		transition: .5s .8s;
+		opacity: 1;
+	}
+
+	.menu .active li:nth-child(5){
+		transition: .5s 1s;
+		opacity: 1;
+	}
+
+	.buttons.active li:hover {
+		transition: none;
+	}
+	
+	.hamburguer {
+		display: block;
+	}
+}

@@ -1,4 +1,4 @@
-import styles from "@/app/styles/components/Banner.module.css"
+import styles from "@/app/styles/components/sections/Banner.module.css"
 
 export default function Banner() {
     return (

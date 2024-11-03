@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
-import styles from "@/app/styles/components/Navbar.module.css";
+import styles from "@/app/styles/components/sections/Navbar.module.css";
 
 
 export default function Navbar () {
