@@ -1,0 +1,70 @@
+/* src/app/styles/components/About.module.css */
+
+.about {
+  padding: 2rem;
+  background-color: #fff;
+  color: #333;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Garante que o conteúdo fique à esquerda */
+  gap: 1rem; /* Controla o espaço entre imagem e texto */
+}
+
+.imageContainer {
+  flex: 0 0 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  border: 2px solid var(--foreground);
+  border-radius: 8px;
+}
+
+.textContainer {
+  flex: 1;
+  max-width: 600px;
+  text-align: left;
+  margin-left: 0;
+}
+
+.textContainer h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.textContainer h3 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+  color: #777;
+}
+
+.textContainer p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Responsividade: Alinha o conteúdo verticalmente em telas menores */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imageContainer,
+  .textContainer {
+    padding: 0;
+    flex: 1 1 100%;
+  }
+
+  .textContainer {
+    padding-top: 1rem;
+  }
+}

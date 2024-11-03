@@ -1,7 +1,40 @@
-export default function About() {
-    return (
-      <div className="">
-        <h1>About</h1>
+// src/app/components/About.tsx
+
+import React from "react";
+import Image from "next/image";
+import styles from "../styles/components/About.module.css";
+
+const About = () => {
+  return (
+    <section className={styles.about}>
+      <div className={styles.content}>
+        {" "}
+        {/* Div para conteúdo em flex */}
+        <div className={styles.imageContainer}>
+          <Image
+            src="/images/mulher-pão.png"
+            alt="Imagem de uma mulher segurando um pão"
+            width={542}
+            height={672}
+            className={styles.image}
+          />
+        </div>
+        <div className={styles.textContainer}>
+          <h2>SOBRE NÓS</h2>
+          <h3>Fazendo produtos artesanais desde XXXX</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+            laoreet sapien ut neque finibus commodo. Nunc tempus justo eu sem
+            dignissim, quis tincidunt nisl tincidunt. Integer scelerisque enim
+            vel sodales mollis. Mauris efficitur tortor et turpis facilisis
+            volutpat. Donec nec massa ex. Donec sit amet lorem accumsan, pretium
+            mi non, pellentesque nisl. Mauris ultrices purus lacus, ut mattis
+            arcu tincidunt vel.
+          </p>
+        </div>
       </div>
-    );
-  }
+    </section>
+  );
+};
+
+export default About;
