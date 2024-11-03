@@ -1,0 +1,72 @@
+/* src/app/styles/components/Navbar.module.css */
+
+.navbar {
+  width: 100%; /* Ocupa toda a largura do container */
+  max-width: 100vw; /* Limita a largura máxima para evitar rolagem horizontal */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem 3rem;
+  background-color: var(--lightpink);
+  border-bottom: 2px solid var(--foreground);
+  box-sizing: border-box; /* Garantir que padding não afete o tamanho total */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--foreground); /* Usar a variável de cor */
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.navLinks li a {
+  position: relative;
+  text-decoration: none;
+  color: var(--foreground);
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.3s ease; /* Transição de cor e transformação */
+}
+
+.navLinks li a:hover {
+  color: #7b2b2b;
+  transform: scale(1.1);
+}
+
+/* Estilo para o sublinhado animado */
+.navLinks li a::after {
+  content: "";
+  position: absolute;
+  left: 0; /* Alinha o sublinhado ao início do link */
+  bottom: -2px; /* Ajuste a posição vertical conforme necessário */
+  width: 100%; /* Ocupa toda a largura do link */
+  height: 1.5px; /* Espessura da linha */
+  background-color: #7b2b2b; /* Cor da linha de sublinhado */
+  transform: scaleX(0); /* Inicia com a linha invisível */
+  transform-origin: center; /* Expande do centro para as extremidades */
+  transition: transform 0.5s ease; /* Animação mais lenta */
+}
+
+.navLinks li a:hover::after {
+  transform: scaleX(1); /* Expande a linha ao passar o mouse */
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialIcons a {
+  color: #7b2b2b; /* Cor padrão dos ícones */
+  font-size: 1.5rem; /* Tamanho dos ícones */
+  transition: color 0.3s ease, transform 0.3s ease; /* Animação de transição */
+}
+
+.socialIcons a:hover {
+  color: var(--foreground); /* Cor ao passar o mouse por cima */
+  transform: scale(1.2); /* Aumenta levemente o tamanho */
+}
