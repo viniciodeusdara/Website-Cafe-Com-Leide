@@ -1,78 +1,31 @@
-nav.menu {
+.menu {
 	position: fixed;
 	top: 0;
 	z-index: 100;
 	display: flex;
-	width: 100vw;
+	width: 100%;
 	justify-content: space-around;
 	align-items: center;
 	height: 80px;
-	background-color: rgba(0,0,0,0);
+	background-color: transparent;
+	transition: background-color 0.3s ease-in-out;
 }
 
-.icons {
-	display: flex;
-	align-items: center;
-	gap: 15px;
-	height: 70px;
-	overflow: hidden;
+/* Mudando a cor da navbar ao fazer o scroll */
+.menu.scrolled {
+    background-color: #FEE5E1; 
 }
 
-.icons .width{
-	width: 90px;
-	display: none;
-}
 
-.icons img {
-	object-fit: cover;
-	object-position: center;
-}
-
-.icons .socials{
-	padding-top: 5px;
-}
-
-.icons .socials * {
-	margin: 0 5px;
-	padding: 0 2px;
-    color: white;
-}
-
-.icons .socials a {
-	text-decoration: none;
-}
-
-.icons svg {
-	font-size: 2em;
-}
-
-.hamburguer {
-	margin: 0 20px;
-	display: none;
-	border: none;
-	background: none;
-	border-top: 3px solid white;
-	cursor: pointer;
-}
-
-.hamburguer::before,
-.hamburguer::after {
-	content: "";
-	display: block;
-	width: 30px;
-	height: 3px;
-	background: white;
-	margin-top: 6px;
-}
-
+/* Definindo botões das seções */
 .buttons {
 	display: flex;
 	gap: 3vw;
-    font-size: 1.7em;
-    font-weight: 400;
+    font-size: 1.8em;
 	align-items: center;
 	justify-content: center;
 	list-style: none;
+	color: white;
 }
 
 .buttons li {
@@ -81,32 +34,73 @@ nav.menu {
 	position: relative;
 }
 
+/* Efeito de underline ao colocar o mouse no botão */
 .buttons li::after {
 	content: '';
 	display: block;
 	height: 2px;
-	background-color: white;
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	transform: scaleX(0);
-	transition: transform .3s ease-in-out
+	background-color: white;
+	transition: transform .3s ease-in;
 }
 
 .buttons li:hover::after {
 	transform: scaleX(1);
 }
 
+/* Definindo cor do texto */
 .buttons li a {
 	color: white;
 	text-decoration: none;
 }
 
-.menu .active {
-	transform: translateX(0);
-	opacity: .94;
-	z-index: 100;
+/* Mesmo efeito com a cor preta (após o scroll) */
+.menu.scrolled .buttons li::after {
+	content: '';
+	display: block;
+	height: 2px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	transform: scaleX(0);
+	background-color: black;
+	transition: transform .3s ease-in;
+}
+
+.menu.scrolled .buttons li:hover::after {
+	transform: scaleX(1);
+}
+
+/* Definindo cor do texto após o scroll */
+.menu.scrolled .buttons li a {
+	color: black;
+}
+
+.socials {
+	padding-top: 5px;
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	height: 70px;
+	overflow: hidden;
+} 
+
+/* Definindo cor dos botões das redes sociais */
+.socials * {
+	margin: 0 2px;
+	padding: 0 2px;
+	font-size: 1.4em;
+	color: white;
+}
+
+/* Mudando a cor dos botões com o scroll */
+.menu.scrolled .socials * {
+	color: black;
 }
 
 @media (max-width: 980px) {
@@ -201,9 +195,5 @@ nav.menu {
 
 	.buttons.active li:hover {
 		transition: none;
-	}
-	
-	.hamburguer {
-		display: block;
 	}
 }

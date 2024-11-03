@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Banner from "@/app/components/sections/Banner";
 import About from "@/app/components/sections/About";
 import Boulangerie from "@/app/components/sections/Boulangerie";
