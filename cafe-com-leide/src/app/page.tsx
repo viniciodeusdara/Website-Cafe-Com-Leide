@@ -1,24 +1,20 @@
 import Image from "next/image";
-import Navbar from "@/app/components/Navbar";
-import Banner from "@/app/components/Banner";
-import About from "@/app/components/About";
-import Boulangerie from "@/app/components/Boulangerie";
-import Products from "@/app/components/Products";
-import Production from "@/app/components/Production";
-import Contact from "@/app/components/Contact";
-import Footer from "@/app/components/Footer";
+import Banner from "@/app/components/sections/Banner";
+import About from "@/app/components/sections/About";
+import Boulangerie from "@/app/components/sections/Boulangerie";
+import Products from "@/app/components/sections/Products";
+import Production from "@/app/components/sections/Production";
+import Contact from "@/app/components/sections/Contact";
 
 export default function Home() {
   return (
     <div className="">
-      <Navbar />
       <Banner />
       <About />
       <Boulangerie />
       <Products />
       <Production />
       <Contact />
-      <Footer />
     </div>
   );
 }
