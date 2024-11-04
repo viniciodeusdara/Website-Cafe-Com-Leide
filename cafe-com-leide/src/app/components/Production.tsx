@@ -5,7 +5,7 @@ import styles from "../styles/components/Production.module.css";
 
 const Production = () => {
   return (
-    <section className={styles.production}>
+    <section id="production" className={styles.production}>
       <div className={styles.videoContainer}>
         <video className={styles.video} autoPlay loop muted>
           <source src="/videos/production-video.mp4" type="video/mp4" />

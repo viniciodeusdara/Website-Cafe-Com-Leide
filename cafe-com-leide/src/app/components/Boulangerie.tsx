@@ -3,7 +3,7 @@ import styles from "../styles/components/Boulangerie.module.css";
 import Image from "next/image";
 const Boulangerie = () => {
     return (
-      <section className={styles.products_carousel}>
+      <section id="boulangerie" className={styles.products_carousel}>
 
 
         <div className={styles.textContainer}>

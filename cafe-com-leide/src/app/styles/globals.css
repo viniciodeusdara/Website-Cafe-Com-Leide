@@ -6,6 +6,10 @@
   --lightpink: #fee5e1;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
 /* 
    @media (prefers-color-scheme: dark) {
    :root {

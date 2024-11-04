@@ -52,6 +52,7 @@
 }
 
 .images_slide img {
+    width: 280px;
     height: 325px;
     margin: 0 20px;
 }

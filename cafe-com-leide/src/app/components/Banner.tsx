@@ -11,7 +11,7 @@ const Banner = () => {
       {/* Overlay para escurecer a imagem */}
       <div className={styles.content}>
         <h1>O seu pão de cada dia sempre fresquinho</h1>
-        <button className={styles.button}><Link href="/#Boulangerie">Nossos Pães</Link></button>
+        <button className={styles.button}><Link href="/#boulangerie">Nossos Pães</Link></button>
       </div>
     </div>
   );

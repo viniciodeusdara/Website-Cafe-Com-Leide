@@ -6,7 +6,7 @@ import styles from "../styles/components/About.module.css";
 
 const About = () => {
   return (
-    <section className={styles.about}>
+    <section id="about" className={styles.about}>
       <div className={styles.content}>
 
         <div className={styles.imageContainer}>
