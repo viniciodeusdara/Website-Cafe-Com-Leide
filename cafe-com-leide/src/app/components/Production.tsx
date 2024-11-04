@@ -8,7 +8,7 @@ const Production = () => {
     <section id="production" className={styles.production}>
       <div className={styles.videoContainer}>
         <video className={styles.video} autoPlay loop muted>
-          <source src="/videos/production-video.mp4" type="video/mp4" />
+          <source src="/videos/production-video-2.mp4" type="video/mp4" />
           Seu navegador não suporta o elemento de vídeo.
         </video>
       </div>
