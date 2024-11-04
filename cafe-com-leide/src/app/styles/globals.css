@@ -9,6 +9,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  overflow-x: hidden;
 }
 /* 
    @media (prefers-color-scheme: dark) {
