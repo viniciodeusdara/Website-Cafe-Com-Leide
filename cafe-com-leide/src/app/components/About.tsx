@@ -8,8 +8,7 @@ const About = () => {
   return (
     <section className={styles.about}>
       <div className={styles.content}>
-        {" "}
-        {/* Div para conteúdo em flex */}
+
         <div className={styles.imageContainer}>
           <Image
             src="/images/mulher-pão.png"

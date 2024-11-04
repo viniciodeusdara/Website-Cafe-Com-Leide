@@ -9,8 +9,8 @@
 .content {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Garante que o conteúdo fique à esquerda */
-  gap: 1rem; /* Controla o espaço entre imagem e texto */
+  justify-content: flex-start; 
+  gap: 1rem; 
 }
 
 .imageContainer {
@@ -18,10 +18,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.image {
-  border-radius: 8px;
 }
 
 .textContainer {
@@ -32,9 +28,11 @@
 }
 
 .textContainer h2 {
-  font-size: 2rem;
+  font-size: 2.7rem;
   margin-bottom: 0.5rem;
   font-weight: bold;
+  display: inline-block;
+  border-bottom: 3px solid var(--lightpink);
 }
 
 .textContainer h3 {
@@ -45,12 +43,12 @@
 }
 
 .textContainer p {
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 1.6;
   color: black;
 }
 
-/* Responsividade: Alinha o conteúdo verticalmente em telas menores */
+
 @media (max-width: 768px) {
   .content {
     flex-direction: column;

@@ -1,4 +1,6 @@
 .line {
   border: 1px solid #fee5e1;
   margin: 1em;
+  margin-left: 4em;
+  margin-right: 4em;
 }

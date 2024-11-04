@@ -1,0 +1,73 @@
+.products_carousel {
+    padding-top: 1rem;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+}
+
+.textContainer h2 {
+    font-size: 2.7rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: var(--foreground);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.textContainer h2 span {
+    display: inline-block;
+    border-bottom: 3px solid var(--lightpink);
+} 
+
+.textContainer a {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 150px 30px 150px;
+}
+
+
+.images {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.images_slide {
+    display: inline-block;
+    animation: 15s slide infinite linear;
+}
+
+.image_container {
+    display: inline-block;
+}
+
+.images_slide img {
+    height: 325px;
+    margin: 0 20px;
+}
+
+.caption {
+    margin-top: 8px;
+    font-size: 1.3rem;
+    color: black;
+    text-align: center;
+}
+
+@keyframes slide {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
