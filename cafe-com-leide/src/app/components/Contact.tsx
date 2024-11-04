@@ -3,8 +3,8 @@ import styles from "../styles/components/Contacts.module.css";
 
 const Contacts = () => {
     return (
-      <section>
-        <div>
+      <section id="contact">
+        <div className={styles.divtitulo}>
           <h1 className={styles.titulo}>Contact</h1>
         </div>
 

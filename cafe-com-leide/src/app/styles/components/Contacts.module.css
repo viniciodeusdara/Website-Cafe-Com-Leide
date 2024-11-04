@@ -25,9 +25,23 @@
     overflow: hidden;
 }
 
-.titulo {
-    border-bottom: 3px solid var(--lightpink);
+.divtitulo{
+    display: flex;
+    text-align: center;
     justify-content: center;
+    align-items: center;
+}
+
+.titulo {
+    font-size: 36px;
+    font-weight: normal;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    display: inline-block; /* Permite centralização e aplica a borda apenas ao texto */
+    padding-bottom: 5px; /* Espaço entre o texto e a linha */
+    text-align: center; 
+    border-bottom: 3px solid var(--lightpink);
 }
 
 .iframe {
