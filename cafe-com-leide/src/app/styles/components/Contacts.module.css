@@ -1,0 +1,65 @@
+.html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: Arial, sans-serif;
+    background-color: var(--lightpink);
+    color: black;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+.map {
+    flex: 4; /* 75% da largura */
+    height: 500px;
+    overflow: hidden;
+}
+
+.titulo {
+    border-bottom: 3px solid var(--lightpink);
+    justify-content: center;
+}
+
+.iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.contact_info {
+    flex: 2; /* 25% da largura */
+    background-color: var(--lightpink);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.social_links p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.social_links p img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.adress p {
+    font-size: 20px;
+    color: black;
+    text-align: justify;
+}
