@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Navbar from "@/app/components/Navbar";
 import Line from "@/app/patterns/Line"
 import Banner from "@/app/components/Banner";
