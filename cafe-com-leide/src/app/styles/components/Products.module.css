@@ -1,0 +1,85 @@
+.html{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.header{
+    flex:1;
+    margin-left: 70px;
+    position: sticky;
+    top: 80px; /* Posição onde o sticky irá "colar" */
+}
+
+.header h1{
+    font-size: 2.7rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    border-bottom: 3px solid var(--lightpink);
+}
+
+.header p {
+    font-size: 20px;
+    color: black;
+    text-align: justify;
+}
+
+.container {
+    max-width: 1700px;
+    padding: 20px;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    text-align: left;
+}
+
+
+.gallery {
+    margin-left: 180px;
+    margin-right: 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    flex: 2;
+    width: 100%;
+}
+
+.item {
+    position: relative;
+    width: 100%;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.item span {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
