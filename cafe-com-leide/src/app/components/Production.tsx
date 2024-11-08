@@ -14,7 +14,7 @@ const Production = () => {
       </div>
       <div className={styles.textContainer}>
         <h2>
-          <span>Feitos à Mão, Com Amor e Cuidado</span>
+          <span>NOSSA PRODUÇÃO</span>
         </h2>
 
         <p>

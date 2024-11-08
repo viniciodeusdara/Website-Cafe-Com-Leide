@@ -12,7 +12,7 @@ const About = () => {
         <div className={styles.imageContainer}>
           <Image
             src="/images/leide.png"
-            alt="Imagem de uma mulher segurando um pão"
+            alt="Imagem da Leide segurando um pão italiano artesanal"
             width={542}
             height={672}
             className={styles.image}
