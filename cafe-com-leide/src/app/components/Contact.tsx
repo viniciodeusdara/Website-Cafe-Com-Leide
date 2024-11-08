@@ -1,11 +1,13 @@
 import React from "react";
 import styles from "../styles/components/Contacts.module.css";
+import { FaInstagram, FaTiktok, FaFacebook } from "react-icons/fa";
+import Link from "next/link";
 
 const Contacts = () => {
     return (
       <section id="contact">
         <div className={styles.divtitulo}>
-          <h1 className={styles.titulo}>Contact</h1>
+          <h1 className={styles.titulo}>CONTATO</h1>
         </div>
 
         <div className={styles.container}>
@@ -21,9 +23,24 @@ const Contacts = () => {
         <div className={styles.contact_info}>
             <div className={styles.social_links}>
             <h1>Redes sociais: </h1>
-                <p><img src="/images/ciabatta.png" alt="Instagram"/> @cafecomleide.ubatuba</p>
-                <p><img src="/images/ciabatta.png" alt="TikTok"/> @cafecomleide.ubatuba</p>
-                <p><img src="/images/ciabatta.png" alt="Facebook"/> @cafecomleide.ubatuba</p>
+                <p>
+                  <Link target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/cafecomleide.ubatuba/" aria-label="Instagram" className={styles.full_link}>
+                    <FaInstagram className={styles.icons}/>
+                    @cafecomleide.ubatuba
+                  </Link>
+                </p>
+                <p>
+                  <Link target="_blank" rel="noopener noreferrer" href="https://www.tiktok.com/@cafecomleide.ubatuba" aria-label="Tiktok" className={styles.full_link}>
+                    <FaTiktok className={styles.icons}/>
+                    @cafecomleide.ubatuba
+                  </Link>
+                </p>
+                <p>
+                  <Link target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/" aria-label="Facebook" className={styles.full_link}>
+                    <FaFacebook className={styles.icons}/>
+                    @cafecomleide.ubatuba
+                  </Link> 
+                </p>
             </div>
             <div className={styles.address}>
               <h1>Endereço: </h1>

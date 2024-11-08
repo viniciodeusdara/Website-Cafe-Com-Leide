@@ -66,13 +66,23 @@
     align-items: center;
 }
 
-.social_links p img {
+.social_links p .icons {
     width: 24px;
     height: 24px;
     margin-right: 10px;
 }
 
-.adress p {
+.social_links p .full_link {
+    color: black;
+    text-decoration: none;
+    transition: transform 0.3s ease;;
+}
+
+.social_links p .full_link:hover {
+    transform: scaleX(1.03);
+}
+
+.address p {
     font-size: 20px;
     color: black;
     text-align: justify;

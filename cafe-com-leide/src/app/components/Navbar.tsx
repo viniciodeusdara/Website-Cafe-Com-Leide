@@ -44,7 +44,7 @@ const Navbar = () => {
                 <Link target="_blank" rel="noopener noreferrer" href="https://www.tiktok.com/@cafecomleide.ubatuba" aria-label="TikTok">
                     <FaTiktok className={styles.iconInsta} />
                 </Link>
-                <Link target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/" aria-label="Facebook">
+                <Link target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/cafecomleide.ubatuba" aria-label="Facebook">
                     <FaFacebook className={styles.iconFace} />
                 </Link>
             </div>

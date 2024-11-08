@@ -70,8 +70,8 @@
 }
 
 .item img {
-    width: 100%;
-    height: auto;
+    width: 380px;
+    height: 450px;
     border-radius: 5px;
 }
 
@@ -80,6 +80,6 @@
     bottom: 10px;
     left: 10px;
     color: white;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
 }

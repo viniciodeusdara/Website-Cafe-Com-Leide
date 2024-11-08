@@ -25,7 +25,7 @@ const Boulangerie = () => {
               <p className={styles.caption}>Croissant</p>
             </div>
             <div className={styles.image_container}>
-              <img src="/images/pão-integral-com-uvas-passas-e-canela.png" alt="Imagem Pão integral com uvas passas e canela"/>
+              <img src="/images/pao-integral-com-uvas-passas-e-canela.png" alt="Imagem Pão integral com uvas passas e canela"/>
               <p className={styles.caption}>Pão Integral com Uvas Passas</p>
             </div>
             <div className={styles.image_container}>
@@ -33,7 +33,7 @@ const Boulangerie = () => {
               <p className={styles.caption}>Panettone com Nozes</p>
             </div>
             <div className={styles.image_container}>
-              <img src="/images/pão-italiano.png" alt="Imagem Pão Italiano Artesanal"/>
+              <img src="/images/pao-italiano.png" alt="Imagem Pão Italiano Artesanal"/>
               <p className={styles.caption}>Pão Italiano Artesanal</p>
             </div>
             <div className={styles.image_container}>
@@ -49,7 +49,7 @@ const Boulangerie = () => {
               <p className={styles.caption}>Croissant</p>
             </div>
             <div className={styles.image_container}>
-              <img src="/images/pão-integral-com-uvas-passas-e-canela.png" alt="Imagem Pão integral com uvas passas e canela"/>
+              <img src="/images/pao-integral-com-uvas-passas-e-canela.png" alt="Imagem Pão integral com uvas passas e canela"/>
               <p className={styles.caption}>Pão Integral com Uvas Passas</p>
             </div>
             <div className={styles.image_container}>
@@ -57,7 +57,7 @@ const Boulangerie = () => {
               <p className={styles.caption}>Panettone com Nozes</p>
             </div>
             <div className={styles.image_container}>
-              <img src="/images/pão-italiano.png" alt="Imagem Pão Italiano Artesanal"/>
+              <img src="/images/pao-italiano.png" alt="Imagem Pão Italiano Artesanal"/>
               <p className={styles.caption}>Pão Italiano Artesanal</p>
             </div>
             <div className={styles.image_container}>

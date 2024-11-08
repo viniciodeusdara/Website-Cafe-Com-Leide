@@ -11,6 +11,10 @@
 	transition: background-color 0.3s ease-in-out;
 }
 
+.logo {
+	width: auto;
+	color: var(--lightpink);
+}
 /* Mudando a cor da navbar ao fazer o scroll */
 .menu.scrolled {
     background-color: #FEE5E1; 
@@ -94,7 +98,7 @@
 	padding: 0 2px;
 	font-size: 1.4em;
 	color: white;
-  transition: color 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .socials a:hover {
