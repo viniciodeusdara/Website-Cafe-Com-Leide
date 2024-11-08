@@ -22,7 +22,7 @@
 
 .header{
     flex:1;
-    margin-left: 70px;
+    margin-left: 100px;
     position: sticky;
     top: 80px; /* Posição onde o sticky irá "colar" */
 }
@@ -55,7 +55,7 @@
 
 
 .gallery {
-    margin-left: 180px;
+    margin-left: 100px;
     margin-right: 80px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);

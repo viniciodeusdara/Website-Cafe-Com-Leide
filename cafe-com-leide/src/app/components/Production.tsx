@@ -18,11 +18,7 @@ const Production = () => {
         </h2>
 
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec
-          gravida metus. Duis consequat tortor ante. Etiam aliquet semper erat,
-          sed iaculis leo malesuada vitae. Sed non aliquam ex, nec vulputate
-          turpis. Mauris posuere dui et augue scelerisque, et tempor purus
-          bibendum. In mi sapien, elementum at luctus et, porta eu dui.
+          Nossa padaria é dedicada à produção artesanal, onde cada detalhe é cuidadosamente pensado. Usamos ingredientes selecionados e preparamos nossas receitas com amor, para que cada pão, doce e bolo seja mais que um alimento, seja uma experiência. Com carinho em cada etapa do processo, buscamos sempre oferecer produtos frescos, de alta qualidade e que carregam o verdadeiro sabor da tradição artesanal.
         </p>
       </div>
     </section>

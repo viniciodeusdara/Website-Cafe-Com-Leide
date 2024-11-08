@@ -8,10 +8,10 @@ const Boulangerie = () => {
 
         <div className={styles.textContainer}>
             <h2>
-              <span>Boulangerie</span>
+              <span>BOULANGERIE</span>
             </h2>
             <a>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam iure eligendi nostrum eveniet temporibus nemo, totam aspernatur, nihil dolore rerum ipsum repellendus blanditiis laboriosam maiores enim facilis non omnis voluptate.
+              Nossa boulangerie é um encontro de tradição e paixão. Cada pão nasce das mãos habilidosas de quem ama o que faz, transformando ingredientes frescos em uma sinfonia de aromas e sabores. Aqui, o tempo é nosso aliado, e o carinho é o segredo. Venha descobrir pães que contam histórias e aquecem o coração.
             </a>
         </div>
 
