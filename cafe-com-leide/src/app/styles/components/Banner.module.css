@@ -1,3 +1,5 @@
+/* src/app/styles/components/Banner.module.css */
+
 .banner {
   position: relative;
   width: 100%;
@@ -56,4 +58,38 @@
 
 .button:hover a {
   color: black;
+}
+
+/* Responsividade para tablets e telas menores */
+@media (max-width: 768px) {
+  .banner {
+    height: 60vh; /* Altura menor para tablets */
+  }
+
+  .content h1 {
+    font-size: 2.5rem; /* Redução do tamanho do título */
+  }
+
+  .button {
+    padding: 0.5rem 1.2rem;
+    font-size: 1.3rem;
+  }
+}
+
+/* Responsividade para telas móveis */
+@media (max-width: 480px) {
+  .banner {
+    height: 50vh; /* Altura menor para dispositivos móveis */
+    background-position: center;
+  }
+
+  .content h1 {
+    font-size: 2rem; /* Ajuste do tamanho do título */
+    margin-bottom: 0.8rem;
+  }
+
+  .button {
+    padding: 0.4rem 1rem;
+    font-size: 1.2rem;
+  }
 }
