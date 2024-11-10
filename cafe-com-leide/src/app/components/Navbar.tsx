@@ -26,9 +26,9 @@ const Navbar = () => {
 
   // Alterna a abertura do menu no mobile
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+    setMenuOpen((prev) => !prev);
   };
-
+  
   return (
     <nav className={`${styles.menu} ${scrolled ? styles.scrolled : ""}`}>
       {/* Logo com link para a página inicial */}
@@ -91,7 +91,7 @@ const Navbar = () => {
           </div>
 
           {/* Ícone do menu hambúrguer (apenas no mobile) */}
-          <div className={styles.hamburger} onClick={toggleMenu}>
+          <div className={`${styles.hamburger} ${menuOpen ? styles.active : ""}`} onClick={toggleMenu}>
             <FaBars />
           </div>
       </div>

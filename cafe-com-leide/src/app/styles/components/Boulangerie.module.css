@@ -72,3 +72,22 @@
         transform: translateX(-100%);
     }
 }
+
+@media (max-width: 768px) {
+    .textContainer h2 {
+        font-size: 2.2rem;
+    }
+    .textContainer a {
+        padding: 0 1em 1em 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .textContainer h2 {
+        font-size: 1.8rem;
+    }
+
+    .textContainer a {
+        padding: 0.5em 2em 1em 1em;
+    }
+}
