@@ -6,7 +6,7 @@
 }
 
 .footer h3 {
-	padding-top: 20px;
+	padding-top: 1em;
 	font-size: 1.2em;
     font-family: Italiana;
 }
@@ -16,9 +16,15 @@
 	color: var(--foreground);
 }
 
-@media (max-width: 720px) {
-	.footer{
-		padding-top: 5px;
+@media (max-width: 768px) {
+	.footer h3 {
+		padding-top: 3%;
 		font-size: .85em;
+	}
+}
+
+@media (max-width: 480px) {
+	.footer h3 {
+		padding-top: 5%;
 	}
 }
