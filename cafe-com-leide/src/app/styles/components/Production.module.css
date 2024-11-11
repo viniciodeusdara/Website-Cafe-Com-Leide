@@ -44,17 +44,47 @@
 
 @media (max-width: 768px) {
   .production {
-    flex-direction: column;
     text-align: center;
   }
 
   .videoContainer,
   .textContainer {
-    flex: 1 1 100%;
     padding-left: 0;
   }
 
+    .videoContainer {
+      width: 35vw;
+      height: auto;
+      margin-right: 5vw;
+    }
+
   .textContainer {
     padding-top: 1rem;
+    text-align: left;
+  }
+
+  .textContainer h2 {
+    font-size: 2.2rem;
+  }
+
+  .textContainer p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .production {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .textContainer h2 {
+    font-size: 1.8rem;
+  }
+
+  .videoContainer {
+    width: 80vw;
+    height: auto;
+    margin: 0;
   }
 }

@@ -79,12 +79,13 @@
     }
     .textContainer a {
         padding: 0 1em 1em 1em;
+        font-size: 1.1rem;
     }
 }
 
 @media (max-width: 480px) {
     .textContainer h2 {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
     }
 
     .textContainer a {
