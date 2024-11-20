@@ -109,14 +109,6 @@
   transform: translateY(0.5rem);
 }
 
-.buttons.active {
-  animation: slideDown 0.5s ease forwards;
-}
-
-.buttons.collapsed {
-  animation: slideUp 0.5s ease forwards;
-}
-
 @keyframes slideDown {
   0% {
     height: 0;
@@ -138,6 +130,15 @@
     opacity: 0;
   }
 }
+
+.buttons.active {
+  animation: slideDown 0.5s ease forwards;
+}
+
+.buttons.collapsed {
+  animation: slideUp 0.5s ease forwards;
+}
+
 
 @media (max-width: 768px) {
   .buttons {
