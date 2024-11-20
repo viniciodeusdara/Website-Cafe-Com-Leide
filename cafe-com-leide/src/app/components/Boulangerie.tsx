@@ -1,6 +1,6 @@
+// Importando CSS
 import styles from "../styles/components/Boulangerie.module.css";
-// import Carrousel from "@/app/patterns/Carousel" // Linha comentada para um possível carrossel no futuro
-import Image from "next/image";
+
 
 // Componente Boulangerie que exibe uma seção de produtos de padaria
 const Boulangerie = () => {

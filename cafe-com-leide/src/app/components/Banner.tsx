@@ -1,4 +1,4 @@
-// Importa o Link do Next.js para navegação interna e React para construir o componente
+// Importando elementos do React e CSS
 import Link from "next/link";
 import React from "react";
 import styles from "../styles/components/Banner.module.css";

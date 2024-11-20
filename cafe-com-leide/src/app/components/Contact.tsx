@@ -1,3 +1,4 @@
+// Importando elementos do React e CSS
 import React from "react";
 import styles from "../styles/components/Contacts.module.css";
 import { FaInstagram, FaTiktok, FaFacebook } from "react-icons/fa"; // Ícones de redes sociais

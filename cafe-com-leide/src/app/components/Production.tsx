@@ -1,3 +1,4 @@
+// Importando elementos do React e CSS
 import React from "react";
 import styles from "../styles/components/Production.module.css";
 

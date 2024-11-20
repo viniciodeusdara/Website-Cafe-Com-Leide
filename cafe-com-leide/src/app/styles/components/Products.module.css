@@ -24,7 +24,7 @@
     flex:1;
     margin-left: 100px;
     position: sticky;
-    top: 80px; /* Posição onde o sticky irá "colar" */
+    top: 80px;
 }
 
 .header h1{

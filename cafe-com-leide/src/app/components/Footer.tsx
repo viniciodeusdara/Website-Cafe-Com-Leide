@@ -1,3 +1,4 @@
+// Importando elementos do React e CSS
 import React from "react";
 import Link from "next/link";
 import styles from "@/app/styles/components/Footer.module.css";

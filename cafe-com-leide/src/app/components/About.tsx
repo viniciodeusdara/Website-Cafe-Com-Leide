@@ -1,4 +1,4 @@
-// Importa o React para construir o componente e o módulo de imagem do Next.js para otimização de imagens
+// Importando elementos do React e CSS
 import React from "react";
 import Image from "next/image";
 import styles from "../styles/components/About.module.css";
@@ -13,11 +13,11 @@ const About = () => {
         {/* Definição da Imagem */}
         <div className={styles.imageContainer}>
           <Image
-            src="/images/leide.png"  // Caminho da imagem otimizada pelo Next.js
+            src="/images/leide.png"  // Caminho da imagem
             alt="Imagem da Leide segurando um pão italiano artesanal"  // Descrição da imagem para acessibilidade
             width={542}  // Largura da imagem
             height={672}  // Altura da imagem
-            className={styles.image}  // Estilos adicionais aplicados à imagem
+            className={styles.image}  // CSS aplicado à imagem
           />
         </div>
         
@@ -41,5 +41,5 @@ const About = () => {
   );
 };
 
-// Exporta o componente About para que possa ser usado em outras partes do site
+
 export default About;
