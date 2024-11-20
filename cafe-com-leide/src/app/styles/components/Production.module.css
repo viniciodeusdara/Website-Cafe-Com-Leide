@@ -47,8 +47,7 @@
     text-align: center;
   }
 
-  .videoContainer,
-  .textContainer {
+  .videoContainer, .textContainer {
     padding-left: 0;
   }
 
