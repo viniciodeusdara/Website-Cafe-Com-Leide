@@ -8,25 +8,19 @@
   align-items: center;
   height: 80px;
   padding: 0 20px;
-  background-color: transparent;
+  background-color: transparent; /* Inicialmente transparente */
   transition: background-color 0.3s ease-in-out;
+}
+
+/* Quando o scroll é acionado ou o menu está aberto */
+.menu.scrolled {
+  background-color: #fee5e1; /* Cor de fundo ao fazer scroll ou abrir o menu */
 }
 
 /* Logo */
 .logo {
   width: auto;
-  color: var(--lightpink);
-}
-
-/* Menu Scrolled */
-.menu.scrolled {
-  background-color: #fee5e1;
-}
-
-/* Menu Ativo */
-.menu.active {
-  background-color: var(--lightpink); /* Muda a cor da navbar */
-  transition: background-color 0.3s ease-in-out;
+  color: var(--lightpink); /* Cor inicial do logo */
 }
 
 /* Links de navegação */
@@ -38,11 +32,7 @@
   list-style: none;
   color: white;
   margin: 0;
-}
-
-.buttons li {
-  padding: 5px;
-  letter-spacing: 1px;
+  transition: color 0.3s ease;
 }
 
 .buttons li a {
@@ -51,7 +41,19 @@
 }
 
 .menu.scrolled .buttons li a {
-  color: black;
+  color: black; /* Links ficam pretos ao fazer scroll ou abrir o menu */
+}
+
+.buttons.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 80px;
+  right: 0;
+  background-color: #fee5e1;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
 }
 
 /* Redes sociais */
@@ -66,7 +68,7 @@
 .socials * {
   font-size: 1.4em;
   color: white;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .menu.scrolled .socials * {
@@ -80,13 +82,7 @@
   color: white;
   cursor: pointer;
   margin-right: 2rem;
-  transition: transform 0.3s ease;
-}
-
-.buttons.active {
-  display: flex;
-  max-height: 300px; /* Define uma altura máxima para o menu */
-  padding: 20px 0; /* Adiciona padding ao abrir */
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .menu.scrolled .hamburger {
@@ -94,54 +90,21 @@
 }
 
 .hamburger.active {
-  transform: translateY(10px); /* Animação de descida */
+  color: black;
+  transform: rotate(90deg); /* Efeito de rotação ao ativar */
 }
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
   .buttons {
-    display: none; /* Esconde o menu inicialmente */
-    flex-direction: column;
-    position: absolute;
-    top: 80px;
-    right: 0;
-    background-color: #fee5e1;
-    width: 100%;
-    text-align: center;
-    padding: 0;
-    overflow: hidden;
-    max-height: 0; /* Altura inicial para a animação */
-    transition: max-height 0.5s ease, padding 0.5s ease; /* Transição suave */
-  }
-
-  .logo {
-    width: 5em;
-    height: auto;
-    color: var(--lightpink);
-  }
-
-  /* Mostra o menu com animação de descida quando a classe .active está presente */
-  .buttons.active {
-    display: flex;
-    opacity: 1;
-    max-height: 300px; 
-    padding: 20px 0; 
-    transform: translateY();
-  }
-  
-  .socials {
-    justify-content: center;
-    padding: 10px 0;
+    display: none;
   }
 
   .hamburger {
     display: block;
   }
 
-  /* Links de navegação no mobile */
-  .buttons li a {
-    color: black;
-    font-size: 1em;
+  .buttons.active {
+    display: flex;
   }
 }
-
