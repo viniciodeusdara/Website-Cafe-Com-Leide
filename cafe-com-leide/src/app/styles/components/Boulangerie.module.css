@@ -89,9 +89,8 @@
     }
 
     .textContainer a {
-        padding: 0.5em 2em 1em 1em;
+        padding: 1em 2em 1em 1.5em;
         font-size: 1.1rem;
-        text-align: left;
     }
 
     .images_slide img {
