@@ -34,7 +34,7 @@
 
 .titulo {
     font-size: 2.7rem;
-    font-weight: normal;
+    font-weight: bold;
     color: black;
     justify-content: center;
     align-items: center;
@@ -115,7 +115,7 @@
 }
 
 @media (max-width: 480px) {
-    
+
     .titulo {
         font-size: 1.8rem;
     }
