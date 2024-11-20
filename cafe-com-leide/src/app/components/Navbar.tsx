@@ -1,10 +1,10 @@
 "use client"; // Indica que este componente é renderizado no cliente (client-side rendering)
-
-import { useState, useEffect } from "react"; // Hooks do React para estado e efeitos
-import { FaInstagram, FaFacebook, FaTiktok, FaBars } from "react-icons/fa"; // Ícones de redes sociais e ícone do menu hambúrguer
-import Link from "next/link"; // Componente para navegação no Next.js
-import Image from "next/image"; // Componente otimizado para imagens no Next.js
-import styles from "@/app/styles/components/Navbar.module.css"; // Importa estilos CSS modularizados
+// Importando elementos do React e CSS
+import { useState, useEffect } from "react"; 
+import { FaInstagram, FaFacebook, FaTiktok, FaBars } from "react-icons/fa"; 
+import Link from "next/link";
+import Image from "next/image"; 
+import styles from "@/app/styles/components/Navbar.module.css";
 
 // Componente Navbar
 const Navbar = () => {
@@ -42,7 +42,7 @@ const Navbar = () => {
       {/* Logo da navbar, redireciona para a página inicial */}
       <Link href="/">
         <Image
-          className={styles.logo} // Estilos CSS aplicados ao logo
+          className={styles.logo}
           src="/images/logo_no_bg.png" // Caminho para o arquivo de imagem
           width={75} // Largura da imagem
           height={75} // Altura da imagem
@@ -73,13 +73,11 @@ const Navbar = () => {
 
       {/* Seção de ícones de redes sociais e do menu hambúrguer */}
       <div style={{ display: "flex", alignItems: "center" }}>
-        {" "}
-        {/* Contêiner flex para alinhamento */}
         {/* Ícones de redes sociais */}
         <div className={styles.socials}>
           <Link
-            target="_blank" // Abre o link em uma nova aba
-            rel="noopener noreferrer" // Melhoria de segurança para links externos
+            target="_blank"
+            rel="noopener noreferrer"
             href="https://www.instagram.com/cafecomleide.ubatuba/" // URL do Instagram
             aria-label="Instagram" // Acessibilidade: descrição para leitores de tela
           >
@@ -114,4 +112,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar; // Exporta o componente para ser usado em outras partes do projeto
+export default Navbar;
