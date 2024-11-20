@@ -1,3 +1,4 @@
+/* Navbar */
 .menu {
   position: fixed;
   top: 0;
@@ -12,15 +13,14 @@
   transition: background-color 0.3s ease-in-out;
 }
 
-/* Quando o scroll é acionado ou o menu está aberto */
 .menu.scrolled {
-  background-color: #fee5e1; /* Cor de fundo ao fazer scroll ou abrir o menu */
+  background-color: #fee5e1; /* Cor de fundo ao fazer scroll */
 }
 
 /* Logo */
 .logo {
   width: auto;
-  color: var(--lightpink); /* Cor inicial do logo */
+  color: var(--lightpink);
 }
 
 /* Links de navegação */
@@ -30,54 +30,79 @@
   font-size: 1.7em;
   align-items: center;
   list-style: none;
-  color: white;
   margin: 0;
-  transition: color 0.3s ease;
+  position: relative;
+}
+
+/* Links padrão */
+.buttons li {
+  position: relative;
+  padding: 5px;
 }
 
 .buttons li a {
-  color: white;
+  color: white; /* Cor inicial do texto */
   text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
-.menu.scrolled .buttons li a {
-  color: black; /* Links ficam pretos ao fazer scroll ou abrir o menu */
-}
-
-.buttons.active {
-  display: flex;
-  flex-direction: column;
+/* Sublinhado inicial */
+.buttons li a::after {
+  content: "";
   position: absolute;
-  top: 80px;
-  right: 0;
-  background-color: #fee5e1;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
   width: 100%;
-  text-align: center;
-  padding: 20px 0;
+  height: 2px;
+  background-color: white; /* Cor inicial do sublinhado */
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transform-origin: center;
 }
 
-/* Redes sociais */
+/* Efeito ao passar o mouse */
+.buttons li a:hover::after {
+  transform: translateX(-50%) scaleX(1); /* Exibe o sublinhado */
+}
+
+/* Estado scrolled */
+.menu.scrolled .buttons li a {
+  color: black; /* Cor do texto no estado scrolled */
+}
+
+.menu.scrolled .buttons li a::after {
+  background-color: black; /* Sublinhado preto no estado scrolled */
+}
+
 .socials {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1em;
   margin-right: 3em;
+  overflow: visible; /* Garante que os ícones não serão cortados */
 }
 
 .socials * {
   font-size: 1.4em;
   color: white;
-  transition: color 0.3s ease;
+  transition: transform 0.3s ease;
+  overflow: visible; /* Permite que as animações se expandam */
 }
 
+.socials *:hover {
+  transform: scale(1.1); /* Efeito ao passar o mouse */
+}
+
+/* Estado scrolled para redes sociais */
 .menu.scrolled .socials * {
-  color: black;
+  color: black; /* Cor preta no estado scrolled */
 }
 
-/* Ícone de menu hambúrguer (apenas no mobile) */
+/* Ícone do menu hambúrguer */
 .hamburger {
-  display: none;
+  display: none; /* Esconde no desktop */
   font-size: 1.8em;
   color: white;
   cursor: pointer;
@@ -86,15 +111,14 @@
 }
 
 .menu.scrolled .hamburger {
-  color: black;
+  color: black; /* Cor preta no estado scrolled */
 }
 
 .hamburger.active {
-  color: black;
-  transform: rotate(90deg); /* Efeito de rotação ao ativar */
+  transform: rotate(90deg); /* Efeito ao ativar */
 }
 
-/* Responsividade para telas menores */
+/* Mobile responsivo */
 @media (max-width: 768px) {
   .buttons {
     display: none;
@@ -106,5 +130,21 @@
 
   .buttons.active {
     display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: #fee5e1;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .buttons li a {
+    color: black; /* Cor preta para o menu mobile */
+  }
+
+  .buttons li a::after {
+    background-color: black; /* Sublinhado preto no menu mobile */
   }
 }
