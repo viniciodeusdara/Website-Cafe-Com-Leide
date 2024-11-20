@@ -55,8 +55,7 @@
     text-align: center;
   }
 
-  .imageContainer,
-  .textContainer {
+  .imageContainer, .textContainer {
     padding: 0;
     flex: 1 1 100%;
   }
@@ -85,7 +84,7 @@
   }
 
   .textContainer h2 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     border-bottom: 2px solid var(--lightpink);
   }
 

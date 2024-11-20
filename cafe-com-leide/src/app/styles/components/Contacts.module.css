@@ -20,7 +20,7 @@
 }
 
 .map {
-    flex: 4; /* 75% da largura */
+    flex: 4;
     height: 500px;
     overflow: hidden;
 }
@@ -34,12 +34,12 @@
 
 .titulo {
     font-size: 2.7rem;
-    font-weight: normal;
+    font-weight: bold;
     color: black;
     justify-content: center;
     align-items: center;
-    display: inline-block; /* Permite centralização e aplica a borda apenas ao texto */
-    padding-bottom: 5px; /* Espaço entre o texto e a linha */
+    display: inline-block;
+    padding-bottom: 5px;
     text-align: center; 
     border-bottom: 3px solid var(--lightpink);
 }
@@ -51,7 +51,7 @@
 }
 
 .contact_info {
-    flex: 2; /* 25% da largura */
+    flex: 2;
     background-color: var(--lightpink);
     padding: 20px;
     display: flex;
@@ -89,6 +89,12 @@
 }
 
 @media (max-width: 768px) {
+
+    .titulo {
+        font-size: 2.2rem;
+        font-weight: bold;
+    }
+
     .container {
         padding: 4vw;
     }
@@ -105,5 +111,32 @@
         flex-direction: column;
         justify-content: space-between;
         max-width: 35vw;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .titulo {
+        font-size: 1.8rem;
+    }
+    .container {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        padding: 5vw;
+        width: 100%;
+    }
+
+    .map {
+        flex: none;
+        width: 100vw;
+        height: 50vh;
+        max-width: 90vw;
+    }
+
+    .contact_info {
+        width: 100vw;
+        height: 50vh; 
+        max-width: 80vw;
     }
 }
