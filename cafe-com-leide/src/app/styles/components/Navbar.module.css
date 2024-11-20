@@ -1,150 +1,175 @@
 /* Navbar */
+/* Estiliza a barra de navegação */
 .menu {
-  position: fixed;
-  top: 0;
-  z-index: 100;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  height: 80px;
-  padding: 0 20px;
-  background-color: transparent; /* Inicialmente transparente */
-  transition: background-color 0.3s ease-in-out;
+  position: fixed; /* Fixa a posição no topo da página */
+  top: 0; /* Alinha ao topo */
+  z-index: 100; /* Garante que ficará acima de outros elementos */
+  display: flex; /* Exibe o conteúdo como flexbox */
+  width: 100%; /* Ocupa toda a largura da tela */
+  justify-content: space-between; /* Espaça os itens ao máximo (esquerda e direita) */
+  align-items: center; /* Alinha os itens ao centro verticalmente */
+  height: 80px; /* Define a altura da barra de navegação */
+  padding: 0 20px; /* Adiciona espaçamento interno nas laterais */
+  background-color: transparent; /* Começa com fundo transparente */
+  transition: background-color 0.3s ease-in-out; /* Animação para mudança de cor de fundo */
 }
 
+/* Adiciona um fundo à navbar ao rolar a página */
 .menu.scrolled {
-  background-color: #fee5e1; /* Cor de fundo ao fazer scroll */
+  background-color: #fee5e1; /* Cor de fundo rosa claro */
 }
 
 /* Logo */
+/* Estiliza o logo da navbar */
 .logo {
-  width: auto;
-  color: var(--lightpink);
+  width: auto; /* Ajusta a largura automaticamente */
+  color: var(--lightpink); /* Usa a cor definida como variável (lightpink) */
 }
 
 /* Links de navegação */
+/* Contêiner para os links */
 .buttons {
-  display: flex;
-  gap: 2vw;
-  font-size: 1.7em;
-  align-items: center;
-  list-style: none;
-  margin: 0;
-  position: relative;
+  display: flex; /* Usa flexbox para organizar os itens */
+  gap: 2vw; /* Espaço horizontal entre os links */
+  font-size: 1.7em; /* Define o tamanho do texto */
+  align-items: center; /* Alinha os links ao centro verticalmente */
+  list-style: none; /* Remove os marcadores de lista */
+  margin: 0; /* Remove margens externas */
+  position: relative; /* Permite posicionamento relativo dos filhos */
 }
 
 /* Links padrão */
+/* Cada item individual na lista de links */
 .buttons li {
-  position: relative;
-  padding: 5px;
+  position: relative; /* Permite que elementos como ::after sejam posicionados relativos ao link */
+  padding: 5px; /* Adiciona um pequeno espaço ao redor dos links */
 }
 
+/* Estiliza os links */
 .buttons li a {
   color: white; /* Cor inicial do texto */
-  text-decoration: none;
-  position: relative;
-  transition: color 0.3s ease;
+  text-decoration: none; /* Remove o sublinhado padrão */
+  position: relative; /* Permite adicionar pseudo-elementos posicionados */
+  transition: color 0.3s ease; /* Animação para mudança de cor */
 }
 
-/* Sublinhado inicial */
+/* Sublinhado inicial nos links */
+/* Adiciona uma linha decorativa que aparece ao passar o mouse */
 .buttons li a::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 50%;
-  transform: translateX(-50%) scaleX(0);
-  width: 100%;
-  height: 2px;
-  background-color: white; /* Cor inicial do sublinhado */
-  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  transform-origin: center;
+  content: ""; /* Cria o pseudo-elemento vazio */
+  position: absolute; /* Posiciona-o em relação ao link */
+  bottom: -2px; /* Alinha o pseudo-elemento abaixo do texto */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%) scaleX(0); /* Inicialmente invisível */
+  width: 100%; /* Faz o pseudo-elemento ter a mesma largura do link */
+  height: 2px; /* Define a altura da linha */
+  background-color: white; /* Cor inicial da linha */
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Animações para exibição */
+  transform-origin: center; /* Centraliza a transformação */
 }
 
-/* Efeito ao passar o mouse */
+/* Efeito ao passar o mouse nos links */
+/* Faz a linha aparecer */
 .buttons li a:hover::after {
-  transform: translateX(-50%) scaleX(1); /* Exibe o sublinhado */
+  transform: translateX(-50%) scaleX(1); /* Exibe a linha (escala completa) */
 }
 
 /* Estado scrolled */
+/* Muda a cor dos links ao rolar a página */
 .menu.scrolled .buttons li a {
-  color: black; /* Cor do texto no estado scrolled */
+  color: black; /* Texto preto no estado scrolled */
 }
 
+/* Muda a cor do sublinhado no estado scrolled */
 .menu.scrolled .buttons li a::after {
-  background-color: black; /* Sublinhado preto no estado scrolled */
+  background-color: black; /* Sublinhado preto */
 }
 
+/* Redes sociais */
+/* Contêiner para os ícones de redes sociais */
 .socials {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1em;
-  margin-right: 3em;
-  overflow: visible; /* Garante que os ícones não serão cortados */
+  display: flex; /* Exibe os ícones em linha */
+  align-items: center; /* Alinha os ícones ao centro verticalmente */
+  justify-content: center; /* Centraliza o conteúdo */
+  gap: 1em; /* Adiciona espaçamento entre os ícones */
+  margin-right: 3em; /* Adiciona espaço à direita */
+  overflow: visible; /* Garante que as animações não sejam cortadas */
 }
 
+/* Estilo dos ícones individuais */
 .socials * {
-  font-size: 1.4em;
-  color: white;
-  transition: transform 0.3s ease;
-  overflow: visible; /* Permite que as animações se expandam */
+  font-size: 1.4em; /* Define o tamanho dos ícones */
+  color: white; /* Cor inicial dos ícones */
+  transition: transform 0.3s ease; /* Animação para transformações (escala) */
+  overflow: visible; /* Garante que partes animadas não sejam cortadas */
 }
 
+/* Efeito ao passar o mouse nos ícones */
+/* Aumenta levemente os ícones */
 .socials *:hover {
-  transform: scale(1.1); /* Efeito ao passar o mouse */
+  transform: scale(1.1); /* Escala o ícone */
 }
 
 /* Estado scrolled para redes sociais */
+/* Muda a cor dos ícones ao rolar a página */
 .menu.scrolled .socials * {
   color: black; /* Cor preta no estado scrolled */
 }
 
 /* Ícone do menu hambúrguer */
+/* Esconde o ícone do menu no desktop */
 .hamburger {
-  display: none; /* Esconde no desktop */
-  font-size: 1.8em;
-  color: white;
-  cursor: pointer;
-  margin-right: 2rem;
-  transition: transform 0.3s ease, color 0.3s ease;
+  display: none; /* Não aparece no desktop */
+  font-size: 1.8em; /* Define o tamanho do ícone */
+  color: white; /* Cor inicial */
+  cursor: pointer; /* Mostra o cursor de clique */
+  margin-right: 2rem; /* Adiciona espaçamento à direita */
+  transition: transform 0.3s ease, color 0.3s ease; /* Animações para transformação e cor */
 }
 
+/* Muda a cor do hambúrguer ao rolar a página */
 .menu.scrolled .hamburger {
   color: black; /* Cor preta no estado scrolled */
 }
 
+/* Efeito ao ativar o menu hambúrguer */
+/* Gira o ícone */
 .hamburger.active {
-  transform: rotate(90deg); /* Efeito ao ativar */
+  transform: rotate(90deg); /* Rotaciona 90 graus */
 }
 
 /* Mobile responsivo */
+/* Estilos aplicados para telas menores */
 @media (max-width: 768px) {
   .buttons {
-    display: none;
+    display: none; /* Esconde os links padrão */
   }
 
+  /* Mostra o menu hambúrguer */
   .hamburger {
-    display: block;
+    display: block; /* Exibe o ícone no mobile */
   }
 
+  /* Mostra os links ao clicar no menu hambúrguer */
   .buttons.active {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 80px;
-    right: 0;
-    background-color: #fee5e1;
-    width: 100%;
-    text-align: center;
-    padding: 20px 0;
+    display: flex; /* Exibe os links como flexbox */
+    flex-direction: column; /* Organiza os links verticalmente */
+    position: absolute; /* Posiciona o menu de forma absoluta */
+    top: 80px; /* Começa abaixo da navbar */
+    right: 0; /* Alinha à direita */
+    background-color: #fee5e1; /* Cor de fundo do menu mobile */
+    width: 100%; /* Ocupa toda a largura */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px 0; /* Adiciona espaçamento interno */
   }
 
+  /* Links no menu mobile */
   .buttons li a {
-    color: black; /* Cor preta para o menu mobile */
+    color: black; /* Cor preta no mobile */
   }
 
+  /* Sublinhado preto no menu mobile */
   .buttons li a::after {
-    background-color: black; /* Sublinhado preto no menu mobile */
+    background-color: black; /* Sublinhado preto */
   }
 }
